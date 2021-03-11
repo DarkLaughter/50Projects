@@ -3,5 +3,15 @@ const boxes = document.querySelectorAll('.box')
 window.addEventListener('scroll',checkForBoxes)
 
 function checkForBoxes() {
-    console.log(window.innerHeight/5 * 4)
+    const trigger = window.innerHeight/5 * 4;
+
+    boxes.forEach(box => {
+        const firstBox = box.getBoundingClientRect().top
+
+        if (firstBox < trigger) {
+            box.classList.add('show')
+        } else {
+            box.classList.remove('show')
+        }
+    })
 }
