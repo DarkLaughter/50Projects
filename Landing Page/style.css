@@ -17,3 +17,27 @@ body {
     height: 100%;
     background-color: grey;
 }
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left {
+    left: 0;
+    background: 
+    url('https://static.comicvine.com/uploads/original/11136/111369947/6960806-2273409841-obeli.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.split.right {
+    right: 0;
+    background: 
+    url('https://wallpapercave.com/wp/wp2631973.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
