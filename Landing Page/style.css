@@ -7,6 +7,7 @@
     --right-hover: rgba(28, 122, 28, 1);
     --hover-width: 75%;
     --other-width: 25%;
+    --speed: 1000ms;
 }
 
 * {
@@ -77,7 +78,7 @@ h1 {
 .split.left {
     left: 0;
     background: 
-    url('https://static.wikia.nocookie.net/mfgyugiohrpg2/images/8/89/SetoKaiba2.jpg/revision/latest?cb=20091212060741');
+    url('https://i.pinimg.com/originals/e0/a4/2f/e0a42f2b9d6a940281fee800ac375533.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -94,7 +95,7 @@ h1 {
 .split.right {
     right: 0;
     background: 
-    url('https://i.pinimg.com/originals/fe/af/00/feaf00b388de917069f5a21368048aa5.jpg');
+    url('https://cache.desktopnexus.com/thumbseg/581/581496-bigthumbnail.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -105,6 +106,11 @@ h1 {
     width: 100%;
     height: 100%;
     background-color: var(--right-color);
+}
+
+
+.split.right, .split.left, .split.right::before, .split.left::before {
+    transition: all var(--speed) ease-in-out;
 }
 
 .hover-left .left {
@@ -121,4 +127,15 @@ h1 {
 
 .hover-right .left {
     width: var(--other-width);
+}
+
+@media(max-width: 800px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 1.2rem;
+        width: 12rem;
+    }
 }
