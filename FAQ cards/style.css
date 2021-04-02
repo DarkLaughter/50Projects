@@ -6,5 +6,22 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: antiquewhite;
+    background-color: #dbb42c;
+}
+
+h1 {
+    margin: 50px 0 30px;
+    text-align: center;
+}
+
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq {
+    background-color: transparent;
+    border: 1px solid #9fa4a8;
+    border-radius: 10px;
+    margin: 20px 0;
 }
