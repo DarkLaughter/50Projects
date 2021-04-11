@@ -83,5 +83,28 @@ h1 {
     right: 30px;
     height: 30px;
     width: 30px;
+}
+
+.faq-toggle .fa-times {
+    display: none;
+}
+
+.faq-toggle:focus {
+    outline: 0;
+}
+
+
+.faq.active .faq-toggle .fa-times {
+    color: white;
+    display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+    display: none;
+}
+
+.faq.active .faq-toggle {
+    background-color: #9fa4a8;
+    border-radius: 50%;
 
 }
