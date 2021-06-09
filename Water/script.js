@@ -5,6 +5,8 @@ const liters = document.getElementById('liters')
 const per = document.getElementById('percentage')
 const remained = document.getElementById('remained')
 
+updateBigCup()
+
 smallCups.forEach((cup, idx) => {
     cup.addEventListener('click', () => {
         highlight(idx)
@@ -22,4 +24,20 @@ function highlight(idx) {
             cup.classList.remove('full')
         }
     })
+
+    updateBigCup()
+}
+
+function updateBigCup() {
+    const fullCups = document.querySelectorAll('.cup-small.full').length
+    const totalCups = smallCups.length
+
+    if(fullCups === 0) {
+        per.style.visibility = 'hidden'
+        per.style.height = 0
+    } else {
+        per.style.visibility = 'visible'
+        per.style.height = `${fullCups / totalCups * 330}px`
+        per.innerText = `${fullCups / totalCups * 100}%`
+    }
 }
